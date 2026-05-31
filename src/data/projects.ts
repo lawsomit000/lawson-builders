@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     slug: "modern-master-bathroom",
     title: "Modern Master Bathroom",
-    location: "Austin, TX",
+    location: "Franklin, TN",
     category: "Bathroom",
     year: "2024",
     scope: "Full Remodel",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
   {
     slug: "wraparound-composite-deck",
     title: "Wraparound Composite Deck",
-    location: "Georgetown, TX",
+    location: "Brentwood, TN",
     category: "Deck",
     year: "2023",
     scope: "New Construction",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
   {
     slug: "custom-barndominium",
     title: "Custom Barndominium",
-    location: "Bastrop County, TX",
+    location: "Leiper's Fork, TN",
     category: "Barndominium",
     year: "2023",
     scope: "Ground-Up Build",
@@ -132,7 +132,7 @@ export const projects: Project[] = [
   {
     slug: "covered-patio-outdoor-kitchen",
     title: "Covered Patio & Outdoor Kitchen",
-    location: "Round Rock, TX",
+    location: "Nashville, TN",
     category: "Outdoor Living",
     year: "2024",
     scope: "New Construction",
@@ -157,7 +157,7 @@ export const projects: Project[] = [
   {
     slug: "primary-suite-addition",
     title: "Primary Suite Addition",
-    location: "Pflugerville, TX",
+    location: "Franklin, TN",
     category: "Addition",
     year: "2023",
     scope: "Room Addition",
@@ -182,7 +182,7 @@ export const projects: Project[] = [
   {
     slug: "spa-style-hall-bathroom",
     title: "Spa-Style Hall Bathroom",
-    location: "Cedar Park, TX",
+    location: "Brentwood, TN",
     category: "Bathroom",
     year: "2024",
     scope: "Full Remodel",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
   {
     slug: "flagstone-patio",
     title: "Flagstone Patio",
-    location: "Buda, TX",
+    location: "Nashville, TN",
     category: "Patio",
     year: "2023",
     scope: "New Construction",
@@ -232,7 +232,7 @@ export const projects: Project[] = [
   {
     slug: "screened-in-deck-addition",
     title: "Screened-In Deck Addition",
-    location: "Kyle, TX",
+    location: "Leiper's Fork, TN",
     category: "Deck",
     year: "2024",
     scope: "Addition & Enclosure",
@@ -257,7 +257,7 @@ export const projects: Project[] = [
   {
     slug: "two-story-barndominium",
     title: "Two-Story Barndominium",
-    location: "Smithville, TX",
+    location: "Franklin, TN",
     category: "Barndominium",
     year: "2022",
     scope: "Ground-Up Build",

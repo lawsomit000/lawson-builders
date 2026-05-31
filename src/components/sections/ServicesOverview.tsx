@@ -4,48 +4,56 @@ const services = [
   {
     num: "01",
     title: "General Contracting",
+    slug: "general-contracting",
     description:
       "Full project management from blueprint to completion. One point of contact, clear timelines, and trades coordinated so nothing falls through.",
   },
   {
     num: "02",
     title: "Bathroom Remodels",
+    slug: "bathroom-remodels",
     description:
       "Demo to finish — custom tile, frameless glass, vanities, fixtures, and everything in between. Spaces you'll use every day, built to last.",
   },
   {
     num: "03",
     title: "Back Decks",
+    slug: "back-decks",
     description:
       "Pressure-treated lumber, cedar, or composite — built to code with proper footings, railings, and finishes that hold up season after season.",
   },
   {
     num: "04",
     title: "Patios",
+    slug: "patios",
     description:
       "Concrete, pavers, or natural stone — properly graded, drained, and set for the long haul. One of the best returns on your home investment.",
   },
   {
     num: "05",
     title: "Barndominiums",
+    slug: "barndominiums",
     description:
       "Shell coordination through full interior finish-out. Custom floor plans, energy-efficient builds, and residential quality throughout.",
   },
   {
     num: "06",
     title: "Outdoor Living Spaces",
+    slug: "outdoor-living-spaces",
     description:
       "Covered patios, pergolas, outdoor kitchens, fire pits — spaces designed around how you actually live, not just what looks good in a photo.",
   },
   {
     num: "07",
     title: "Home Additions",
+    slug: "home-additions",
     description:
       "Seamless integration with your existing structure — master suites, family rooms, garage conversions, and full second-story additions.",
   },
   {
     num: "08",
     title: "Renovations & Repairs",
+    slug: "renovations-repairs",
     description:
       "Kitchen refreshes, structural repairs, flooring, and updates of all sizes — handled with the same care we bring to every larger project.",
   },
@@ -93,9 +101,10 @@ export default function ServicesOverview() {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border-l border-t border-zinc-100">
             {services.map((service) => (
-              <div
+              <Link
                 key={service.title}
-                className="border-r border-b border-zinc-100 p-8 group hover:bg-warm-50 transition-colors duration-300"
+                href={`/services#${service.slug}`}
+                className="border-r border-b border-zinc-100 p-8 group hover:bg-warm-50 transition-colors duration-300 block"
               >
                 <p className="text-zinc-300 text-xs font-medium tracking-widest mb-6">
                   {service.num}
@@ -106,7 +115,7 @@ export default function ServicesOverview() {
                 <p className="text-zinc-500 text-sm leading-relaxed">
                   {service.description}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

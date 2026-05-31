@@ -16,7 +16,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Modern Master Bathroom",
-    location: "Austin, TX",
+    location: "Nashville, TN",
     description: "Custom arched doorways, freestanding soaker tub, wood vanity, and natural stone throughout.",
     category: "Bathroom",
     image: "/images/interior-arches.jpg",
@@ -26,7 +26,7 @@ const projects: Project[] = [
   },
   {
     title: "Wraparound Composite Deck",
-    location: "Georgetown, TX",
+    location: "Franklin, TN",
     description: "500 sq ft deck with cable railings and built-in seating.",
     category: "Deck",
     gradient: "from-amber-800 via-orange-900 to-stone-900",
@@ -35,7 +35,7 @@ const projects: Project[] = [
   },
   {
     title: "Covered Patio & Outdoor Kitchen",
-    location: "Round Rock, TX",
+    location: "Brentwood, TN",
     description: "Stamped concrete, pergola, outdoor kitchen, and fireplace.",
     category: "Outdoor Living",
     gradient: "from-stone-500 via-amber-700 to-stone-700",
@@ -44,7 +44,7 @@ const projects: Project[] = [
   },
   {
     title: "Custom Barndominium",
-    location: "Bastrop County, TX",
+    location: "Williamson County, TN",
     description: "2,400 sq ft build from shell erection to full interior finish-out.",
     category: "Barndominium",
     gradient: "from-zinc-500 via-slate-600 to-zinc-800",

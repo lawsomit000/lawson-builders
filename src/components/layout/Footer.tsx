@@ -100,19 +100,19 @@ export default function Footer() {
             <ul className="space-y-5">
               <li>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Phone</p>
-                <a href="tel:+15551234567" className="text-zinc-300 text-sm hover:text-white transition-colors">
-                  (555) 123-4567
+                <a href="tel:+17739578493" className="text-zinc-300 text-sm hover:text-white transition-colors">
+                  (773) 957-8493
                 </a>
               </li>
               <li>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Email</p>
-                <a href="mailto:hello@toddjosephbuilders.com" className="text-zinc-300 text-sm hover:text-white transition-colors">
-                  hello@toddjosephbuilders.com
+                <a href="mailto:hello@tjbuild.com" className="text-zinc-300 text-sm hover:text-white transition-colors">
+                  hello@tjbuild.com
                 </a>
               </li>
               <li>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Service Area</p>
-                <p className="text-zinc-400 text-sm">Austin Metro &amp; Surrounding Counties</p>
+                <p className="text-zinc-400 text-sm">Middle Tennessee &amp; Surrounding Counties</p>
               </li>
             </ul>
           </div>
@@ -122,7 +122,7 @@ export default function Footer() {
           <p className="text-zinc-600 text-xs">
             &copy; {new Date().getFullYear()} Todd Joseph Builders. All rights reserved.
           </p>
-          <p className="text-zinc-700 text-xs">Licensed &amp; Insured General Contractor · Texas</p>
+          <p className="text-zinc-700 text-xs">Licensed &amp; Insured General Contractor · Middle TN</p>
         </div>
       </div>
     </footer>

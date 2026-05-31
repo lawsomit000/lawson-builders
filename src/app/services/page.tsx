@@ -21,6 +21,7 @@ export const metadata: Metadata = {
 type Service = {
   num: string;
   title: string;
+  slug: string;
   description: string;
   highlights: string[];
 } & (
@@ -32,6 +33,7 @@ const services: Service[] = [
   {
     num: "01",
     title: "General Contracting",
+    slug: "general-contracting",
     description:
       "When a project spans multiple trades — framing, electrical, plumbing, HVAC, tile — you need someone who can coordinate it all without things falling through the cracks. We manage schedules, subcontractors, material deliveries, and inspections so you don't have to. One point of contact, a clear plan, and a project that finishes on time.",
     highlights: ["Full project management", "Subcontractor coordination", "Permit & inspection handling", "Single point of contact"],
@@ -41,6 +43,7 @@ const services: Service[] = [
   {
     num: "02",
     title: "Bathroom Remodels",
+    slug: "bathroom-remodels",
     description:
       "A bathroom remodel done right transforms one of the most-used rooms in your home. We handle everything from demo to the final fixture — tile work, shower surrounds, tub installation, vanities, lighting, and plumbing. Whether you're updating a guest bath or building a spa-quality master suite, we plan the layout, source quality materials, and execute the work with precision.",
     highlights: ["Demo to finish", "Custom tile & stonework", "Shower & tub surrounds", "Vanity & fixture installation"],
@@ -50,6 +53,7 @@ const services: Service[] = [
   {
     num: "03",
     title: "Back Decks",
+    slug: "back-decks",
     description:
       "A well-built deck extends your living space and adds real value to your home. We design and build decks to code — choosing the right material (pressure-treated lumber, cedar, or composite) for your climate, budget, and aesthetic. Every deck we build gets proper footings, structural framing, and finishes that hold up season after season.",
     highlights: ["Pressure-treated & composite options", "Code-compliant footings", "Railing & stair systems", "Built-in seating available"],
@@ -59,6 +63,7 @@ const services: Service[] = [
   {
     num: "04",
     title: "Patios",
+    slug: "patios",
     description:
       "Patios are one of the best ROI improvements you can make to a home. We pour concrete slabs, lay pavers, and set natural stone — each with proper grading, drainage, and base preparation to prevent cracking and shifting over time. Add a pergola, fire pit, or outdoor kitchen and we'll coordinate the full buildout.",
     highlights: ["Concrete, paver & stone options", "Proper grading & drainage", "Stamped concrete available", "Full outdoor buildout coordination"],
@@ -68,6 +73,7 @@ const services: Service[] = [
   {
     num: "05",
     title: "Barndominiums",
+    slug: "barndominiums",
     description:
       "Barndominiums require a contractor who understands both the steel structure side and the residential finish-out side. We handle the full scope — from working with your shell manufacturer to completing the interior to your specifications. Floor plans, insulation, electrical, plumbing, HVAC, drywall, cabinetry, flooring — we manage it all under one roof.",
     highlights: ["Shell coordination", "Full interior finish-out", "Custom floor plans", "Energy-efficient builds"],
@@ -77,6 +83,7 @@ const services: Service[] = [
   {
     num: "06",
     title: "Outdoor Living Spaces",
+    slug: "outdoor-living-spaces",
     description:
       "A great outdoor living space is one you actually use. We design and build covered patios, pergolas, outdoor kitchens, fire pit areas, and entertainment spaces that extend your home's footprint and match your lifestyle. Every project is designed around how you plan to use the space — from quiet evenings to backyard gatherings.",
     highlights: ["Covered patios & pergolas", "Outdoor kitchens", "Fire pit & fireplace builds", "Custom entertainment areas"],
@@ -86,6 +93,7 @@ const services: Service[] = [
   {
     num: "07",
     title: "Home Additions",
+    slug: "home-additions",
     description:
       "Adding on to your home is one of the most complex projects a homeowner can take on. It requires careful structural planning, seamless integration with the existing home, and coordination across every trade. We've built master suite additions, family room expansions, garage conversions, and full second-story additions.",
     highlights: ["Structural planning & permits", "Seamless home integration", "Room additions & suite buildouts", "Garage conversions"],
@@ -95,6 +103,7 @@ const services: Service[] = [
   {
     num: "08",
     title: "Renovations & Repairs",
+    slug: "renovations-repairs",
     description:
       "Not every project is a ground-up build. Sometimes a home needs a refreshed kitchen, repaired structural damage, updated flooring, or a room that finally gets finished the right way. We handle renovations of all sizes with the same care we bring to larger projects. No job is too small if it's something you care about.",
     highlights: ["Kitchen updates", "Structural repairs", "Flooring & interior updates", "Room finishing & refresh"],
@@ -130,6 +139,7 @@ export default function ServicesPage() {
             return (
               <div
                 key={service.title}
+                id={service.slug}
                 className="grid grid-cols-1 lg:grid-cols-2 border-b border-zinc-100 group"
               >
                 {/* Visual */}

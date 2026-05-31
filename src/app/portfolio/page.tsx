@@ -46,7 +46,7 @@ export default function PortfolioPage() {
             Portfolio
           </h1>
           <p className="text-zinc-400 text-lg max-w-xl leading-relaxed">
-            Projects completed across Texas — from bathroom remodels to full barndominium
+            Projects completed across Middle TN — from bathroom remodels to full barndominium
             builds. Click any project to see the full photo gallery.
           </p>
         </div>

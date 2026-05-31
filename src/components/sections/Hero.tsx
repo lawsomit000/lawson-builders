@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="relative max-w-screen-xl mx-auto px-6 lg:px-10 pb-20 sm:pb-28 pt-40 w-full">
         <div className="max-w-4xl">
           <p className="text-warm-accent text-[10px] font-medium tracking-[0.3em] uppercase mb-8">
-            Licensed &amp; Insured General Contractor · Texas
+            Licensed &amp; Insured General Contractor · Middle TN
           </p>
 
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[80px] font-semibold text-white leading-[1.06] mb-8">

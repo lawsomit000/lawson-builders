@@ -42,13 +42,13 @@ export default function ContactPage() {
                   {[
                     {
                       label: "Phone",
-                      value: "(555) 123-4567",
-                      href: "tel:+15551234567",
+                      value: "(773) 957-8493",
+                      href: "tel:+17739578493",
                     },
                     {
                       label: "Email",
-                      value: "hello@toddjosephcontracting.com",
-                      href: "mailto:hello@toddjosephcontracting.com",
+                      value: "hello@tjbuild.com",
+                      href: "mailto:hello@tjbuild.com",
                     },
                   ].map((item) => (
                     <div key={item.label} className="border-b border-zinc-100 pb-8">
@@ -76,7 +76,7 @@ export default function ContactPage() {
                       Service Area
                     </p>
                     <p className="text-zinc-900 font-medium">
-                      Austin Metro &amp; Surrounding Counties
+                      Middle Tennessee &amp; Surrounding Counties
                     </p>
                   </div>
                 </div>
