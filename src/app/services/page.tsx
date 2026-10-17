@@ -2,21 +2,44 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ContactCTA from "@/components/sections/ContactCTA";
+import HowItWorks from "@/components/sections/HowItWorks";
+import PricingProcess from "@/components/sections/PricingProcess";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Home Design & Remodel Planning | Lawson Builders",
   description:
-    "General contracting, bathroom remodels, decks, patios, barndominiums, outdoor living spaces, home additions, and renovations across Middle Tennessee.",
+    "Design and plan your remodel, addition, or outdoor space with Lawson Builders. Bid-ready plans for Middle Tennessee homeowners. Free consultation call.",
   openGraph: {
-    title: "Services | Todd Joseph Builders",
+    title: "Home Design & Remodel Planning | Lawson Builders",
     description:
-      "General contracting, bathroom remodels, decks, patios, barndominiums, outdoor living spaces, home additions, and renovations across Middle Tennessee.",
-    images: [{ url: "/images/deck-outdoor.jpg", width: 1200, height: 630, alt: "Covered outdoor deck with fireplace by Todd Joseph Builders" }],
+      "Design and plan your remodel, addition, or outdoor space with Lawson Builders. Bid-ready plans for Middle Tennessee homeowners.",
+    images: [{ url: "/images/design-services.jpg", width: 1200, height: 630, alt: "Designer reviewing floor plans and material swatches — Lawson Builders" }],
   },
   twitter: {
-    images: ["/images/deck-outdoor.jpg"],
+    images: ["/images/design-services.jpg"],
   },
 };
+
+// TODO: Confirm full deliverables list before publishing this section.
+// Potential items (all unconfirmed — check each before going live):
+//   - Measured existing-conditions drawings
+//   - Proposed floor plan
+//   - Elevations
+//   - 3D renderings (confirm if offered)
+//   - Finish and fixture schedule
+//   - Material spec sheet
+//   - Budget estimate / cost range
+//   - Contractor bid package
+const deliverables = [
+  "Measured existing-conditions drawings",
+  "Proposed floor plan",
+  "Elevations",
+  "3D renderings (confirm if offered)",
+  "Finish and fixture schedule",
+  "Material spec sheet",
+  "Budget estimate / cost range",
+  "Contractor bid package",
+];
 
 type Service = {
   num: string;
@@ -32,83 +55,123 @@ type Service = {
 const services: Service[] = [
   {
     num: "01",
-    title: "General Contracting",
-    slug: "general-contracting",
+    title: "Whole-Home & Renovation Design",
+    slug: "whole-home-design",
     description:
-      "When a project spans multiple trades — framing, electrical, plumbing, HVAC, tile — you need someone who can coordinate it all without things falling through the cracks. We manage schedules, subcontractors, material deliveries, and inspections so you don't have to. One point of contact, a clear plan, and a project that finishes on time.",
-    highlights: ["Full project management", "Subcontractor coordination", "Permit & inspection handling", "Single point of contact"],
-    image: "/images/general-contracting.jpg",
-    imageAlt: "Home interior mid-renovation showing exposed framing, subfloor, and active construction",
+      "Planning a larger renovation means a lot of moving pieces. We look at the whole picture — layout, flow, finishes, and phasing — and turn it into one cohesive plan, so every room works together and your contractor knows exactly what to bid.",
+    highlights: [
+      "Whole-home layout and flow planning",
+      "Cohesive finish and material direction",
+      "Project phasing recommendations",
+      "Bid-ready plan package",
+    ],
+    image: "/images/design-services.jpg",
+    imageAlt: "Designer reviewing floor plan sketches and material swatches for a whole-home renovation plan",
   },
   {
     num: "02",
-    title: "Bathroom Remodels",
-    slug: "bathroom-remodels",
+    title: "Bathroom Design",
+    slug: "bathroom-design",
     description:
-      "A bathroom remodel done right transforms one of the most-used rooms in your home. We handle everything from demo to the final fixture — tile work, shower surrounds, tub installation, vanities, lighting, and plumbing. Whether you're updating a guest bath or building a spa-quality master suite, we plan the layout, source quality materials, and execute the work with precision.",
-    highlights: ["Demo to finish", "Custom tile & stonework", "Shower & tub surrounds", "Vanity & fixture installation"],
+      "A great bathroom starts long before the first tile is set. We plan the layout, select fixtures and finishes, and work through the details — storage, lighting, shower configuration — on paper first. Whether it's a guest bath refresh or a spa-style primary suite, you'll leave with a plan any contractor can price accurately.",
+    highlights: [
+      "Layout and space planning",
+      "Tile, fixture, and vanity selections",
+      "Lighting and storage design",
+      "Bid-ready plan and spec sheet",
+    ],
     image: "/images/interior-arches.jpg",
-    imageAlt: "Luxury bathroom with arched doorways and freestanding spa tub",
+    imageAlt: "Bathroom design with arched doorways and freestanding soaking tub",
   },
   {
     num: "03",
-    title: "Back Decks",
-    slug: "back-decks",
+    title: "Deck Design",
+    slug: "deck-design",
     description:
-      "A well-built deck extends your living space and adds real value to your home. We design and build decks to code — choosing the right material (pressure-treated lumber, cedar, or composite) for your climate, budget, and aesthetic. Every deck we build gets proper footings, structural framing, and finishes that hold up season after season.",
-    highlights: ["Pressure-treated & composite options", "Code-compliant footings", "Railing & stair systems", "Built-in seating available"],
-    image: "/images/deck-outdoor.jpg",
-    imageAlt: "Covered back deck with stone fireplace, recessed lighting, and outdoor living area at dusk",
+      "A well-designed deck extends your living space and adds real value to your home. We help you choose the right size, layout, and material — pressure-treated, cedar, or composite — for your yard, budget, and style, then document it so your builder has a clear plan to follow.",
+    highlights: [
+      "Size, shape, and layout planning",
+      "Material comparison and selection",
+      "Railing, stair, and built-in seating design",
+      "Plan package ready for contractor bids",
+    ],
+    // TODO: Needs a dedicated exterior deck image — provide a photo and we'll swap this placeholder out.
+    gradient: "from-stone-200 via-stone-300 to-stone-400",
   },
   {
     num: "04",
-    title: "Patios",
-    slug: "patios",
+    title: "Patio Design",
+    slug: "patio-design",
     description:
-      "Patios are one of the best ROI improvements you can make to a home. We pour concrete slabs, lay pavers, and set natural stone — each with proper grading, drainage, and base preparation to prevent cracking and shifting over time. Add a pergola, fire pit, or outdoor kitchen and we'll coordinate the full buildout.",
-    highlights: ["Concrete, paver & stone options", "Proper grading & drainage", "Stamped concrete available", "Full outdoor buildout coordination"],
+      "Concrete, pavers, or natural stone — the right patio depends on how you'll use it. We design the layout, select materials, and plan how it connects to your home and yard, so the finished space feels intentional, not added on.",
+    highlights: [
+      "Layout and traffic flow planning",
+      "Material and pattern selection",
+      "Connection to home, deck, and landscape",
+      "Plan and material list ready for bids",
+    ],
     image: "/images/patio-outdoor.jpg",
-    imageAlt: "Modern patio with flagstone path, raised composite deck, pergola, and lush landscaping",
+    imageAlt: "Patio design with flagstone path, raised deck, pergola, and landscaping",
   },
   {
     num: "05",
-    title: "Barndominiums",
-    slug: "barndominiums",
+    title: "Barndominium Planning",
+    slug: "barndominium-planning",
     description:
-      "Barndominiums require a contractor who understands both the steel structure side and the residential finish-out side. We handle the full scope — from working with your shell manufacturer to completing the interior to your specifications. Floor plans, insulation, electrical, plumbing, HVAC, drywall, cabinetry, flooring — we manage it all under one roof.",
-    highlights: ["Shell coordination", "Full interior finish-out", "Custom floor plans", "Energy-efficient builds"],
+      "Barndominiums offer incredible flexibility — which means a lot of decisions. We help you plan a floor plan that fits your family, select interior finishes, and think through how you'll live in the space for years to come.",
+    highlights: [
+      "Custom floor plan development",
+      "Interior layout and finish selections",
+      "Energy-efficiency considerations",
+      "Plan package ready for builder bids",
+    ],
     image: "/images/barndominium.jpg",
-    imageAlt: "White board-and-batten barndominium with metal roof lit up at dusk against a mountain backdrop",
+    imageAlt: "Board-and-batten barndominium exterior at dusk",
   },
   {
     num: "06",
-    title: "Outdoor Living Spaces",
-    slug: "outdoor-living-spaces",
+    title: "Outdoor Living Design",
+    slug: "outdoor-living-design",
     description:
-      "A great outdoor living space is one you actually use. We design and build covered patios, pergolas, outdoor kitchens, fire pit areas, and entertainment spaces that extend your home's footprint and match your lifestyle. Every project is designed around how you plan to use the space — from quiet evenings to backyard gatherings.",
-    highlights: ["Covered patios & pergolas", "Outdoor kitchens", "Fire pit & fireplace builds", "Custom entertainment areas"],
-    image: "/images/outdoor-living.jpg",
-    imageAlt: "Pergola-covered outdoor living space with stone fireplace, teak furniture, and paver patio",
+      "Covered patios, pergolas, outdoor kitchens, fire features. We design outdoor spaces around how you actually live — where you'll gather, cook, and relax — and how it all flows from the inside out.",
+    highlights: [
+      "Covered patio and pergola design",
+      "Outdoor kitchen and fireplace layout",
+      "Lighting and comfort planning",
+      "Bid-ready plan package",
+    ],
+    image: "/images/deck-outdoor.jpg",
+    imageAlt: "Covered outdoor living space design with stone fireplace and comfortable seating area",
   },
   {
     num: "07",
-    title: "Home Additions",
-    slug: "home-additions",
+    title: "Home Addition Planning",
+    slug: "home-addition-planning",
     description:
-      "Adding on to your home is one of the most complex projects a homeowner can take on. It requires careful structural planning, seamless integration with the existing home, and coordination across every trade. We've built master suite additions, family room expansions, garage conversions, and full second-story additions.",
-    highlights: ["Structural planning & permits", "Seamless home integration", "Room additions & suite buildouts", "Garage conversions"],
+      "The best additions look like they were always there. We plan new square footage that fits your property, matches your home's character, and connects naturally to your existing layout — from primary suites to family rooms to second stories.",
+    highlights: [
+      "Concept and layout options",
+      "Integration with existing floor plan",
+      "Exterior and interior finish direction",
+      "Plan package ready for contractor bids",
+    ],
     image: "/images/home-addition.jpg",
-    imageAlt: "Modern home addition with floor-to-ceiling glass walls, wood deck, and open-concept interior",
+    imageAlt: "Home addition design with floor-to-ceiling windows and open-concept interior",
   },
   {
     num: "08",
-    title: "Renovations & Repairs",
-    slug: "renovations-repairs",
+    title: "Kitchen & Interior Design",
+    slug: "kitchen-interior-design",
     description:
-      "Not every project is a ground-up build. Sometimes a home needs a refreshed kitchen, repaired structural damage, updated flooring, or a room that finally gets finished the right way. We handle renovations of all sizes with the same care we bring to larger projects. No job is too small if it's something you care about.",
-    highlights: ["Kitchen updates", "Structural repairs", "Flooring & interior updates", "Room finishing & refresh"],
-    image: "/images/renovation.jpg",
-    imageAlt: "Home interior mid-renovation with exposed ceiling joists, brick walls, and lumber staged for build-out",
+      "Kitchens and living spaces get the most daily use — and the most benefit from good planning. We design layouts, cabinetry, surfaces, and lighting that make your home work better and feel like yours.",
+    highlights: [
+      "Kitchen layout and cabinetry design",
+      "Countertop, flooring, and surface selections",
+      "Lighting and fixture planning",
+      "Bid-ready plan and spec sheet",
+    ],
+    // TODO: Needs a finished kitchen or interior design photo.
+    gradient: "from-warm-200 via-stone-200 to-stone-300",
   },
 ];
 
@@ -119,19 +182,66 @@ export default function ServicesPage() {
       <section className="bg-zinc-950 pt-[72px]">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-10 py-20 sm:py-28">
           <p className="text-warm-accent text-[10px] font-medium tracking-[0.3em] uppercase mb-6">
-            What We Build
+            Design &amp; Planning Services
           </p>
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.05] mb-8 max-w-2xl">
-            Services
+          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.05] mb-8 max-w-3xl">
+            Plan It Right
+            <br />
+            <em className="italic font-normal">Before It&apos;s Built</em>
           </h1>
-          <p className="text-zinc-400 text-lg max-w-xl leading-relaxed">
-            From small renovations to full-scale builds, we help homeowners plan, manage, and
-            complete projects with confidence and craftsmanship we stand behind.
+          <p className="text-zinc-400 text-lg max-w-xl leading-relaxed mb-10">
+            Most remodel headaches start before construction does: unclear plans, finishes
+            chosen on the fly, budgets that don&apos;t match the vision. We help you design
+            every detail up front, so you can hire a builder with confidence and know
+            exactly what you&apos;re getting.
           </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center text-xs font-semibold tracking-widest uppercase border border-white/30 text-white px-8 py-4 hover:bg-white hover:text-zinc-950 transition-colors duration-300"
+          >
+            Book a Free Call
+          </Link>
         </div>
       </section>
 
-      {/* Alternating service rows */}
+      {/* How It Works */}
+      <HowItWorks />
+
+      {/* What You Walk Away With */}
+      <section className="bg-white py-24 sm:py-32 border-t border-zinc-100">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
+          <div className="mb-16">
+            <p className="text-warm-accent text-[10px] font-medium tracking-[0.28em] uppercase mb-5">
+              Your Plan Package
+            </p>
+            <h2 className="font-serif text-4xl sm:text-5xl font-semibold text-zinc-950 leading-tight">
+              Everything You Need
+              <br />
+              <em className="italic font-normal">to Hire With Confidence</em>
+            </h2>
+          </div>
+
+          <div className="bg-warm-50 border border-zinc-100 p-10">
+            <p className="text-zinc-500 text-sm leading-relaxed mb-8 max-w-2xl">
+              Every completed design engagement includes a plan package ready to hand off
+              to a contractor. The exact deliverables depend on project scope — the items
+              below are pending confirmation.
+            </p>
+            {/* TODO: Confirm which deliverables are included before publishing.
+                Remove the amber "TODO" prefix from each item once confirmed. */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
+              {deliverables.map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <div className="w-1 h-1 rounded-full bg-warm-accent shrink-0 mt-2" />
+                  <span className="text-sm text-amber-600 italic">TODO: Confirm — {item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Alternating service blocks */}
       <section className="bg-white">
         <div className="border-t border-zinc-100">
           {services.map((service, index) => {
@@ -198,7 +308,7 @@ export default function ServicesPage() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 hover:text-warm-accent transition-colors group/link w-fit"
                   >
-                    Talk Through This Project
+                    Book a Free Call
                     <svg
                       className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform"
                       fill="none"
@@ -215,6 +325,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <PricingProcess />
       <ContactCTA />
     </>
   );

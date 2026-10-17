@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: project.title,
     description: project.description,
     openGraph: {
-      title: `${project.title} | Todd Joseph Builders`,
+      title: `${project.title} | Lawson Builders`,
       description: project.description,
       images: [{ url: ogImage, width: 1200, height: 630, alt: project.title }],
     },
@@ -55,7 +55,7 @@ export default async function ProjectDetailPage({ params }: Props) {
   return (
     <>
       {/* Fixed-header spacer */}
-      <div className="h-[72px] bg-zinc-950" />
+      <div className="h-[72px] bg-warm-50" />
 
       {/* Carousel — full width, no container constraints */}
       <ImageCarousel images={project.images} title={project.title} />
@@ -122,7 +122,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 <div className="px-6 py-6">
                   <Link
                     href="/contact"
-                    className="block text-center text-xs font-semibold tracking-widest uppercase bg-zinc-950 text-white px-6 py-4 hover:bg-warm-accent transition-colors duration-300"
+                    className="block text-center text-xs font-semibold tracking-widest uppercase bg-warm-accent text-white px-6 py-4 hover:bg-zinc-900 transition-colors duration-300"
                   >
                     Start a Similar Project
                   </Link>

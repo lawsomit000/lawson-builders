@@ -17,47 +17,125 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+// TODO: Replace https://lawsonbuilders.com with the real production domain
 export const metadata: Metadata = {
-  metadataBase: new URL("https://toddjosephbuilders.com"),
+  metadataBase: new URL("https://lawsonbuilders.com"),
   title: {
-    default: "Todd Joseph Builders | Built Right. Built Local. Built to Last.",
-    template: "%s | Todd Joseph Builders",
+    default: "Lawson Builders | Home Design & Remodel Planning in Middle Tennessee",
+    template: "%s | Lawson Builders",
   },
   description:
-    "Family-owned general contractor serving Franklin, Brentwood, Nashville & Middle Tennessee. Bathroom remodels, decks, patios, barndominiums, home additions, and more — built to last generations.",
+    "Turn your ideas into a finished design, detailed plan, and realistic budget. Lawson Builders helps Middle Tennessee homeowners plan with confidence. Free consultation call.",
   keywords: [
-    "general contractor Franklin TN",
-    "home remodel Nashville",
-    "deck builder Brentwood TN",
-    "patio contractor Middle Tennessee",
-    "barndominium builder Tennessee",
-    "bathroom remodel Franklin",
-    "home addition Nashville TN",
-    "outdoor living spaces Tennessee",
-    "family owned contractor TN",
+    "home design planning Franklin TN",
+    "remodel planning Middle Tennessee",
+    "interior design consultation Nashville",
+    "bathroom kitchen design Franklin TN",
+    "home addition planning Brentwood TN",
+    "barndominium design Tennessee",
+    "outdoor living design Middle Tennessee",
+    "design consultation Franklin TN",
+    "whole home renovation planning Nashville",
   ],
   openGraph: {
-    siteName: "Todd Joseph Builders",
-    title: "Todd Joseph Builders | Built Right. Built Local. Built to Last.",
+    siteName: "Lawson Builders",
+    title: "Lawson Builders | Home Design & Remodel Planning in Middle Tennessee",
     description:
-      "Family-owned general contractor serving Franklin, Brentwood, Nashville & Middle Tennessee. Craftsmanship built to last generations.",
+      "Turn your ideas into a finished design, detailed plan, and realistic budget. Serving Middle Tennessee. Free consultation call.",
     type: "website",
     locale: "en_US",
+    // TODO: Replace with a new 1200×630 OG image using Lawson branding
     images: [
       {
         url: "/images/interior-arches.jpg",
         width: 1200,
         height: 630,
-        alt: "Todd Joseph Builders — luxury bathroom remodel with arched doorways",
+        alt: "Lawson Builders — home design and planning, Middle Tennessee",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Todd Joseph Builders | Built Right. Built Local. Built to Last.",
+    title: "Lawson Builders | Home Design & Remodel Planning in Middle Tennessee",
     description:
-      "Family-owned general contractor serving Franklin, Brentwood, Nashville & Middle Tennessee.",
+      "Turn your ideas into a finished design, detailed plan, and realistic budget. Free consultation call.",
+    // TODO: Replace with Lawson-branded OG image
     images: ["/images/interior-arches.jpg"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  name: "Lawson Builders",
+  description:
+    "Home design and planning services in Middle Tennessee. We help homeowners turn their ideas into finished designs, detailed plans, and realistic budgets — so they're ready to hire a builder with confidence.",
+  // TODO: Replace with real domain
+  url: "https://lawsonbuilders.com",
+  // TODO: Replace with real domain
+  logo: "https://lawsonbuilders.com/images/logo-lll.png",
+  // TODO: Replace with real phone number
+  telephone: "[FILL IN: phone]",
+  // TODO: Replace with real email
+  email: "[FILL IN: email]",
+  address: {
+    "@type": "PostalAddress",
+    // TODO: Add full address
+    addressLocality: "[FILL IN: city]",
+    addressRegion: "TN",
+    addressCountry: "US",
+  },
+  areaServed: [
+    "Franklin, TN",
+    "Brentwood, TN",
+    "Nashville, TN",
+    "Nolensville, TN",
+    "Leiper's Fork, TN",
+    "Williamson County, TN",
+  ],
+  founders: [
+    { "@type": "Person", name: "Madi Lawson" },
+    { "@type": "Person", name: "Mitch Lawson" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Home Design & Planning Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Free Consultation Call", serviceType: "Home Design" },
+        price: "0",
+        priceCurrency: "USD",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Room Design Plan", serviceType: "Home Design" },
+        price: "995",
+        priceCurrency: "USD",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Renovation Planning Package", serviceType: "Home Design" },
+        price: "1950",
+        priceCurrency: "USD",
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Bathroom & Kitchen Design", serviceType: "Home Design" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Addition & Barndominium Planning", serviceType: "Home Design" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Outdoor Living Design", serviceType: "Home Design" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Whole-Home Renovation Design", serviceType: "Home Design" },
+      },
+    ],
   },
 };
 
@@ -68,6 +146,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geist.variable} ${playfair.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {/* TODO: Replace favicon, apple-touch-icon, and PWA icons with Lawson-branded assets */}
+        {/* TODO: Add Google Analytics / GA4 ID for Lawson Builders — remove any previous client tracking IDs */}
+        {/* TODO: Add Google Search Console verification meta tag for Lawson domain */}
+      </head>
       <body className="min-h-full flex flex-col bg-white text-zinc-900 font-sans">
         <Header />
         <main className="flex-1">{children}</main>

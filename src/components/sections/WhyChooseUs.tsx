@@ -1,8 +1,13 @@
 const reasons = [
   {
-    title: "Hands-On Ownership",
+    title: "Design-First Approach",
     description:
-      "Todd is on every job site — not managing from a desk. Direct access to the person responsible for your project.",
+      "We plan the space with you before anything gets built. Layout, finishes, materials — all agreed on upfront so there are no surprises during the build.",
+  },
+  {
+    title: "Madi & Mitch on Every Job",
+    description:
+      "We're owner-operated. Madi and Mitch are directly involved on every project — not managing from a distance. You have direct access to the people responsible for your home.",
   },
   {
     title: "Clear Communication",
@@ -20,11 +25,6 @@ const reasons = [
       "Fair bids with every line item explained. No hidden fees, no fuzzy estimates designed to grow after signing.",
   },
   {
-    title: "Timelines That Hold",
-    description:
-      "We plan ahead, order materials early, and build schedules we can keep. When delays happen, you hear from us first.",
-  },
-  {
     title: "Local & Trusted",
     description:
       "We live and work in the communities we build in. Our reputation depends on doing right by our neighbors.",
@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-20">
           <div>
             <p className="text-warm-accent text-[10px] font-medium tracking-[0.28em] uppercase mb-5">
-              Why Todd Joseph
+              Why Lawson Builders
             </p>
             <h2 className="font-serif text-4xl sm:text-5xl font-semibold text-white leading-tight">
               The Way Contracting

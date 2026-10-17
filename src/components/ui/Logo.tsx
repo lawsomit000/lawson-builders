@@ -1,7 +1,8 @@
+// Note: The image-based logo (/images/logo-lll.png) is used in Header and Footer.
+// This SVG component is kept for potential future use.
+
 interface LogoProps {
-  /** "dark" = on dark bg (white + gold), "light" = navy + gold */
   variant?: "dark" | "light";
-  /** "mark" = compact TJB icon only (header), "full" = complete stacked logo (footer) */
   size?: "mark" | "full";
   className?: string;
 }
@@ -33,25 +34,17 @@ export default function Logo({ variant = "dark", size = "mark", className = "" }
   if (size === "full") {
     return (
       <div className={`flex flex-col items-center leading-none select-none ${className}`}>
-        {/* Roof icon — larger */}
         <RoofIcon primary={c.primary} gold={c.gold} width={96} />
-
-        {/* TJB lettermark */}
         <div className="font-serif font-bold text-[42px] tracking-[0.05em] leading-none mt-1">
-          <span style={{ color: c.primary }}>T</span>
-          <span style={{ color: c.gold }}>J</span>
-          <span style={{ color: c.primary }}>B</span>
+          <span style={{ color: c.primary }}>L</span>
+          <span style={{ color: c.gold }}>B</span>
         </div>
-
-        {/* "TODD JOSEPH" */}
         <p
           className="font-serif text-[18px] font-semibold tracking-[0.22em] uppercase mt-3"
           style={{ color: c.primary }}
         >
-          Todd Joseph
+          Lawson
         </p>
-
-        {/* "—BUILDERS—" with decorative lines */}
         <div className="flex items-center gap-2.5 mt-1.5">
           <div className="h-px w-8" style={{ backgroundColor: c.gold }} />
           <p className="text-[10px] font-semibold tracking-[0.3em] uppercase" style={{ color: c.gold }}>
@@ -59,8 +52,6 @@ export default function Logo({ variant = "dark", size = "mark", className = "" }
           </p>
           <div className="h-px w-8" style={{ backgroundColor: c.gold }} />
         </div>
-
-        {/* Tagline */}
         <p
           className="text-[8px] font-medium tracking-[0.18em] uppercase mt-3"
           style={{ color: c.primary, opacity: 0.5 }}
@@ -71,14 +62,12 @@ export default function Logo({ variant = "dark", size = "mark", className = "" }
     );
   }
 
-  // Compact mark for header
   return (
     <div className={`flex flex-col items-center leading-none select-none ${className}`}>
       <RoofIcon primary={c.primary} gold={c.gold} width={72} />
       <div className="font-serif font-bold text-[28px] tracking-[0.05em] leading-none mt-0.5">
-        <span style={{ color: c.primary }}>T</span>
-        <span style={{ color: c.gold }}>J</span>
-        <span style={{ color: c.primary }}>B</span>
+        <span style={{ color: c.primary }}>L</span>
+        <span style={{ color: c.gold }}>B</span>
       </div>
       <p className="text-[8px] font-medium tracking-[0.28em] uppercase mt-1" style={{ color: c.gold }}>
         Builders

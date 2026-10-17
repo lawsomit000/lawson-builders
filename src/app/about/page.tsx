@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ContactCTA from "@/components/sections/ContactCTA";
-import Testimonials from "@/components/sections/Testimonials";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About the Lawsons | Lawson Builders",
   description:
-    "Family-owned and operated general contractor serving Middle Tennessee. Learn about Todd Joseph Builders — built on honest communication, dependable work, and craftsmanship that lasts generations.",
+    "Madi and Mitch Lawson are Middle Tennessee's home design and planning team. Navy veteran, middle school sweethearts, parents of two, and passionate about home design. Free consultation call.",
   openGraph: {
-    title: "About | Todd Joseph Builders",
+    title: "About the Lawsons | Lawson Builders",
     description:
-      "Family-owned and operated general contractor serving Middle Tennessee. Built on honest communication, dependable work, and craftsmanship that lasts generations.",
-    images: [{ url: "/images/family.jpg", width: 1200, height: 630, alt: "The Joseph family" }],
+      "Meet Madi and Mitch Lawson — home design and planning specialists serving Middle Tennessee, built on family, creativity, and a genuine passion for beautiful homes.",
+    images: [{ url: "/images/lawson-family.png", width: 1200, height: 630, alt: "Madi and Mitch Lawson with their two boys — Lawson Builders" }],
   },
   twitter: {
-    images: ["/images/family.jpg"],
+    images: ["/images/lawson-family.png"],
   },
 };
 
@@ -39,9 +38,9 @@ const values = [
   },
   {
     num: "04",
-    title: "Trust",
+    title: "Design",
     description:
-      "Your home is your biggest investment. We treat it that way — respecting your space, your budget, and your time at every step.",
+      "Great spaces start with great planning. We invest the time upfront to design every detail so the result is something you love.",
   },
 ];
 
@@ -55,11 +54,11 @@ export default function AboutPage() {
             Who We Are
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.05] mb-8 max-w-2xl">
-            About Todd Joseph Contracting
+            About Lawson Builders
           </h1>
           <p className="text-zinc-400 text-lg max-w-xl leading-relaxed">
-            A local, hands-on contracting company built on honest communication, dependable
-            work, and careful attention from start to finish.
+            A husband-and-wife home design and planning team built on honest communication,
+            dependable work, and a genuine passion for creating homes families love.
           </p>
         </div>
       </section>
@@ -80,26 +79,29 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-5 text-zinc-600 leading-relaxed">
                 <p>
-                  Todd Joseph Contracting was built on a simple idea: homeowners deserve a
-                  contractor they can actually trust. Someone who shows up, does quality work,
-                  communicates clearly, and finishes what they started.
+                  Madi and Mitch Lawson have been together since middle school — over 15
+                  years of building a life side by side, including two young boys and a
+                  shared passion for home design and renovation that turned into something
+                  more.
                 </p>
                 <p>
-                  With over a decade of hands-on experience, we&apos;ve built barndominiums from
-                  the ground up, remodeled hundreds of bathrooms, constructed decks and patios
-                  that become the favorite room of the house, and managed large-scale additions
-                  that give families the space they&apos;ve been waiting for.
+                  Before starting Lawson Builders, Mitch served in the U.S. Navy as a
+                  rescue swimmer. That experience — discipline, calm under pressure,
+                  attention to detail when it matters most — shows up in every project we
+                  take on. We don&apos;t cut corners, and we don&apos;t disappear when
+                  things get hard.
                 </p>
                 <p>
-                  What sets us apart isn&apos;t a pitch — it&apos;s a track record. We&apos;re
-                  owner-operated, which means when you hire Todd Joseph Builders, Todd is on
-                  the job. Not a project manager reading notes. Not a subcontractor you&apos;ve
-                  never met. The person responsible for your project is the one doing the work.
+                  Together, we&apos;ve bought, designed, renovated, and sold 7 homes.
+                  We&apos;ve lived through every phase of the process as homeowners — the
+                  good decisions and the ones we learned from. We started Lawson Builders
+                  to do this full time, and to bring the same care we put into our own
+                  homes to yours.
                 </p>
                 <p>
-                  We work primarily in Franklin, Brentwood, Nashville, Leiper&apos;s Fork, and
-                  the surrounding Middle Tennessee area. We&apos;re your neighbors, and we take
-                  our reputation in this community seriously.
+                  We work primarily in Franklin, Brentwood, Nashville, Nolensville, and
+                  the surrounding Middle Tennessee area. We&apos;re your neighbors, and we
+                  take our reputation in this community seriously.
                 </p>
               </div>
             </div>
@@ -121,20 +123,20 @@ export default function AboutPage() {
                   aria-hidden="true"
                 />
                 <div className="relative">
-                  <p className="text-white font-serif font-semibold text-2xl">Todd Joseph</p>
+                  <p className="text-white font-serif font-semibold text-2xl">Madi &amp; Mitch Lawson</p>
                   <p className="text-warm-accent text-[9px] font-medium tracking-[0.28em] uppercase mt-1">
-                    Contracting
+                    Lawson Builders
                   </p>
-                  <p className="text-zinc-400 text-sm mt-3">Licensed &amp; Insured · Tennessee</p>
+                  <p className="text-zinc-400 text-sm mt-3">Home Design &amp; Planning · Tennessee</p>
                 </div>
               </div>
 
-              {/* Stats */}
+              {/* Stats — TODO: confirm these figures */}
               <div className="grid grid-cols-3 gap-0 border-l border-t border-zinc-100">
                 {[
-                  { value: "10+", label: "Years in Business" },
-                  { value: "200+", label: "Projects Complete" },
-                  { value: "5★", label: "Avg. Review Rating" },
+                  { value: "7", label: "Homes Designed" },
+                  { value: "15+", label: "Years Together" },
+                  { value: "100%", label: "Owner-Operated" },
                 ].map((stat) => (
                   <div key={stat.label} className="border-r border-b border-zinc-100 p-6 text-center">
                     <p className="font-serif text-3xl font-semibold text-zinc-950">{stat.value}</p>
@@ -150,12 +152,11 @@ export default function AboutPage() {
                 </h3>
                 <ul className="space-y-3.5">
                   {[
-                    "Free, no-pressure project estimates",
-                    "Owner on-site for every project",
+                    "Free, no-pressure consultation call",
+                    "Madi & Mitch on every project",
                     "Regular progress updates",
                     "Written scopes and clear pricing",
-                    "Fully licensed and insured",
-                    "Warranty on all work performed",
+                    "Owner-operated and accountable",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-zinc-600">
                       <div className="w-1 h-1 rounded-full bg-warm-accent shrink-0" />
@@ -173,11 +174,10 @@ export default function AboutPage() {
       <section className="bg-warm-50 border-t border-zinc-100">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Photo */}
             <div className="relative min-h-[480px] lg:min-h-[600px] overflow-hidden">
               <Image
-                src="/images/family.jpg"
-                alt="The Joseph family"
+                src="/images/lawson-family.png"
+                alt="Madi and Mitch Lawson with their two boys"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -196,29 +196,30 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-5 text-zinc-600 leading-relaxed">
                 <p>
-                  Todd Joseph Builders is a family business in every sense of the word. Family
-                  is everything to us — it&apos;s why we started this company, and it&apos;s
-                  what drives the standard we hold ourselves to on every single job.
+                  Lawson Builders is a family business in every sense of the word. We
+                  started this company because we love what a well-designed, thoughtfully
+                  planned home does for a family — and we wanted to bring that to the
+                  community we&apos;re proud to be a part of.
                 </p>
                 <p>
-                  When you invite us into your home, you&apos;re trusting us with more than a
-                  construction project. You&apos;re trusting us with the place where your family
-                  eats dinner, wakes up on Christmas morning, and makes memories that last a
-                  lifetime. We don&apos;t take that lightly.
+                  When you invite us into your home, you&apos;re trusting us with the
+                  place where your family eats dinner, wakes up on Christmas morning, and
+                  makes memories that last a lifetime. We don&apos;t take that lightly.
                 </p>
                 <p>
-                  That&apos;s why we build everything as if it were our own home — because we
-                  know your family deserves craftsmanship they&apos;ll love for generations
-                  to come.
+                  That&apos;s why we design everything as if it were our own home —
+                  because after seven renovations of our own, we know exactly what families
+                  need and deserve.
                 </p>
               </div>
 
               <div className="mt-10 pt-8 border-t border-zinc-200">
                 <p className="font-serif text-lg text-zinc-800 italic leading-snug">
-                  &ldquo;I want every family to feel the same pride in their home that I feel
-                  in mine.&rdquo;
+                  {/* TODO: Replace with an approved quote from Madi or Mitch */}
+                  &ldquo;TODO: Add a quote from Madi or Mitch — something personal about why
+                  they started Lawson Builders or what drives the quality of their work.&rdquo;
                 </p>
-                <p className="text-zinc-500 text-sm mt-3">— Todd Joseph</p>
+                <p className="text-zinc-500 text-sm mt-3">— Madi &amp; Mitch Lawson</p>
               </div>
             </div>
           </div>
@@ -251,7 +252,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Testimonials />
       <ContactCTA />
     </>
   );

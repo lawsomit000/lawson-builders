@@ -3,44 +3,45 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background photo */}
       <Image
-        src="/images/interior-arches.jpg"
-        alt="Luxury interior with arched doorways and spa bathroom"
+        src="/images/hero-bg.jpg"
+        alt="Warm living room with stone fireplace and wood beams — Lawson Builders home design"
         fill
         priority
         className="object-cover object-center"
         sizes="100vw"
       />
 
-      {/* Dark overlay — same technique as Trace (photo at ~30% with dark tint on top) */}
+      {/* Gradient overlay */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(8,8,6,0.55) 0%, rgba(8,8,6,0.45) 40%, rgba(8,8,6,0.75) 100%)",
+            "linear-gradient(to bottom, rgba(8,8,6,0.62) 0%, rgba(8,8,6,0.52) 35%, rgba(8,8,6,0.82) 100%)",
         }}
         aria-hidden="true"
       />
 
-      {/* Content — anchored to lower portion */}
-      <div className="relative max-w-screen-xl mx-auto px-6 lg:px-10 pb-20 sm:pb-28 pt-40 w-full">
+      {/* Content */}
+      <div className="relative max-w-screen-xl mx-auto px-6 lg:px-10 pt-24 pb-16 w-full">
         <div className="max-w-4xl">
           <p className="text-warm-accent text-[10px] font-medium tracking-[0.3em] uppercase mb-8">
-            Licensed &amp; Insured General Contractor · Middle TN
+            Home Design &amp; Planning · Middle Tennessee
           </p>
 
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-[80px] font-semibold text-white leading-[1.06] mb-8">
-            Quality Contracting
+            Designed With You.
             <br />
-            for Homes{" "}
-            <em className="italic font-normal text-warm-accent">Built to Last.</em>
+            {/* TODO: Confirm second line — "Ready to Build." or keep "Built to Last." */}
+            <em className="italic font-normal text-warm-accent">Ready to Build.</em>
           </h1>
 
           <p className="text-white/70 text-lg sm:text-xl leading-relaxed max-w-xl mb-12">
-            Dependable craftsmanship, clear communication, and quality work across
-            remodels, decks, patios, barndominiums, and more.
+            We help you turn inspiration into a finished design, a detailed plan, and a
+            budget that fits — so you can hire a builder with confidence. Your first
+            call is free.
           </p>
 
           <div className="flex flex-wrap items-center gap-6">
@@ -48,13 +49,13 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center text-xs font-semibold tracking-widest uppercase bg-white text-zinc-950 px-8 py-4 hover:bg-warm-accent hover:text-white transition-colors duration-300"
             >
-              Request a Free Estimate
+              Book a Free Call
             </Link>
             <Link
-              href="/portfolio"
+              href="#how-it-works"
               className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors group"
             >
-              View Our Work
+              See How It Works
               <svg
                 className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
                 fill="none"
@@ -65,22 +66,6 @@ export default function Hero() {
               </svg>
             </Link>
           </div>
-        </div>
-
-        {/* Stats row */}
-        <div className="mt-20 pt-10 border-t border-white/15 grid grid-cols-3 gap-8 max-w-sm">
-          {[
-            { value: "10+", label: "Years Experience" },
-            { value: "200+", label: "Projects Complete" },
-            { value: "100%", label: "Owner-Operated" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="font-serif text-2xl sm:text-3xl font-semibold text-white">
-                {stat.value}
-              </p>
-              <p className="text-white/50 text-xs mt-1.5 tracking-wide">{stat.label}</p>
-            </div>
-          ))}
         </div>
       </div>
 

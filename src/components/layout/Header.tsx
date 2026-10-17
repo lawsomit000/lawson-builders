@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
 ];
@@ -35,13 +36,14 @@ export default function Header() {
       <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center" aria-label="Todd Joseph Builders — Home">
+          <Link href="/" className="flex items-center" aria-label="Lawson Builders — Home">
             <Image
-              src="/images/logo-tjb-alpha.png"
-              alt="Todd Joseph Builders"
-              width={96}
-              height={64}
-              style={{ filter: "brightness(0) invert(1)" }}
+              src="/images/logo-lll.png"
+              alt="Lawson Builders"
+              width={108}
+              height={72}
+              placeholder="empty"
+              unoptimized
               priority
             />
           </Link>
@@ -77,7 +79,7 @@ export default function Header() {
               href="/contact"
               className="text-xs font-semibold tracking-widest uppercase border border-white/30 text-white px-5 py-2.5 hover:bg-white hover:text-zinc-950 transition-colors duration-300"
             >
-              Free Estimate
+              Book a Call
             </Link>
           </div>
 
@@ -117,7 +119,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 text-xs font-semibold tracking-widest uppercase border border-white/30 text-white px-5 py-3 text-center hover:bg-white hover:text-zinc-950 transition-colors"
             >
-              Free Estimate
+              Book a Call
             </Link>
           </nav>
         </div>

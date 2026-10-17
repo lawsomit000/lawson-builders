@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/sections/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | Todd Joseph Contracting",
+  title: "Book a Free Call | Lawson Builders",
   description:
-    "Request a free estimate or get in touch with Todd Joseph Contracting. We respond quickly and love hearing about new projects.",
+    "Book a free 30-minute call with Lawson Builders in Middle Tennessee. Talk through your project, goals, and budget. No pressure, no obligation.",
+  openGraph: {
+    title: "Book a Free Call | Lawson Builders",
+    description:
+      "Book a free 30-minute call with Lawson Builders. We'll talk through your project and recommend the right next step. Middle Tennessee.",
+  },
 };
 
 export default function ContactPage() {
@@ -17,12 +22,11 @@ export default function ContactPage() {
             Let&apos;s Talk
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.05] mb-8 max-w-2xl">
-            Request a Free Estimate
+            Book a Free Call
           </h1>
           <p className="text-zinc-400 text-lg max-w-xl leading-relaxed">
-            Whether you have detailed plans or just a rough idea, we&apos;d love to hear about
-            your project. Fill out the form and we&apos;ll get back to you within one business
-            day — no pressure, no sales pitch.
+            Fill out the form and we&apos;ll reach out within one business day to schedule
+            your free 30-minute call — no pressure, no obligation.
           </p>
         </div>
       </section>
@@ -42,13 +46,15 @@ export default function ContactPage() {
                   {[
                     {
                       label: "Phone",
-                      value: "(773) 957-8493",
-                      href: "tel:+17739578493",
+                      // TODO: Replace with real Lawson phone number
+                      value: "[FILL IN: phone]",
+                      href: "tel:+1XXXXXXXXXX",
                     },
                     {
                       label: "Email",
-                      value: "hello@tjbuild.com",
-                      href: "mailto:hello@tjbuild.com",
+                      // TODO: Replace with real Lawson email
+                      value: "[FILL IN: email]",
+                      href: "mailto:hello@lawsonbuilders.com",
                     },
                   ].map((item) => (
                     <div key={item.label} className="border-b border-zinc-100 pb-8">
@@ -92,9 +98,9 @@ export default function ContactPage() {
                   Not Sure Where to Start?
                 </p>
                 <p className="text-zinc-300 text-sm leading-relaxed">
-                  That&apos;s completely okay. Just tell us what you&apos;re thinking and
-                  we&apos;ll help you figure out scope, timeline, and budget — no commitment
-                  needed.
+                  That&apos;s exactly what the free call is for. Just tell us what
+                  you&apos;re thinking and we&apos;ll help you figure out the right next
+                  step — no commitment needed.
                 </p>
               </div>
             </div>

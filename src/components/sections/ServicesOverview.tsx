@@ -3,59 +3,31 @@ import Link from "next/link";
 const services = [
   {
     num: "01",
-    title: "General Contracting",
-    slug: "general-contracting",
+    title: "Kitchens",
+    slug: "bathrooms-kitchens",
     description:
-      "Full project management from blueprint to completion. One point of contact, clear timelines, and trades coordinated so nothing falls through.",
+      "Layouts, cabinetry, surfaces, and lighting designed around how your family cooks and gathers.",
   },
   {
     num: "02",
-    title: "Bathroom Remodels",
-    slug: "bathroom-remodels",
+    title: "Bathrooms",
+    slug: "bathroom-design",
     description:
-      "Demo to finish — custom tile, frameless glass, vanities, fixtures, and everything in between. Spaces you'll use every day, built to last.",
+      "Tile, fixtures, vanities, and storage planned on paper first, so the finished room works and feels right.",
   },
   {
     num: "03",
-    title: "Back Decks",
-    slug: "back-decks",
+    title: "Living Spaces",
+    slug: "kitchen-interior-design",
     description:
-      "Pressure-treated lumber, cedar, or composite — built to code with proper footings, railings, and finishes that hold up season after season.",
+      "Furniture, color, finishes, and lighting that make everyday rooms feel finished and like yours.",
   },
   {
     num: "04",
-    title: "Patios",
-    slug: "patios",
+    title: "Outdoor Spaces",
+    slug: "outdoor-living",
     description:
-      "Concrete, pavers, or natural stone — properly graded, drained, and set for the long haul. One of the best returns on your home investment.",
-  },
-  {
-    num: "05",
-    title: "Barndominiums",
-    slug: "barndominiums",
-    description:
-      "Shell coordination through full interior finish-out. Custom floor plans, energy-efficient builds, and residential quality throughout.",
-  },
-  {
-    num: "06",
-    title: "Outdoor Living Spaces",
-    slug: "outdoor-living-spaces",
-    description:
-      "Covered patios, pergolas, outdoor kitchens, fire pits — spaces designed around how you actually live, not just what looks good in a photo.",
-  },
-  {
-    num: "07",
-    title: "Home Additions",
-    slug: "home-additions",
-    description:
-      "Seamless integration with your existing structure — master suites, family rooms, garage conversions, and full second-story additions.",
-  },
-  {
-    num: "08",
-    title: "Renovations & Repairs",
-    slug: "renovations-repairs",
-    description:
-      "Kitchen refreshes, structural repairs, flooring, and updates of all sizes — handled with the same care we bring to every larger project.",
+      "Patios, decks, and covered areas designed around how you gather and relax.",
   },
 ];
 
@@ -69,30 +41,41 @@ export default function ServicesOverview() {
               What We Do
             </p>
             <h2 className="font-serif text-4xl sm:text-5xl font-semibold text-zinc-950 leading-tight">
-              Built for Every Stage
+              Design First,
               <br />
-              <em className="italic font-normal">of Your Project</em>
+              <em className="italic font-normal">Then Build With Confidence</em>
             </h2>
           </div>
           <div className="max-w-sm">
             <p className="text-zinc-500 leading-relaxed mb-6">
-              From small renovations to full-scale builds, we help homeowners plan,
-              manage, and complete projects with confidence.
+              Most remodel headaches start before construction does: unclear plans, finishes
+              chosen on the fly, and budgets that don&apos;t match the vision. We solve that
+              up front. We design your space with you, plan every detail, and build a
+              realistic budget — so when it&apos;s time to hire a builder, you know exactly
+              what you&apos;re getting.
             </p>
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 hover:text-warm-accent transition-colors group"
-            >
-              All Services
-              <svg
-                className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div className="flex items-center gap-5">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 hover:text-warm-accent transition-colors group"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+                All Services
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/pricing"
+                className="text-sm font-semibold text-zinc-400 hover:text-warm-accent transition-colors"
+              >
+                See Pricing
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -126,7 +109,7 @@ export default function ServicesOverview() {
           href="/services"
           className="inline-flex items-center text-xs font-semibold tracking-widest uppercase border border-zinc-900 text-zinc-900 px-8 py-4 hover:bg-zinc-950 hover:text-white hover:border-zinc-950 transition-colors duration-300"
         >
-          View All Services
+          All Services
         </Link>
       </div>
     </section>

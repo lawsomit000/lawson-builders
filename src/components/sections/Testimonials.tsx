@@ -1,32 +1,10 @@
-const testimonials = [
-  {
-    quote:
-      "Todd transformed our master bathroom into something we're truly proud of. The tile work is immaculate, the timeline was accurate, and the whole process felt stress-free. Highly recommend.",
-    author: "Sarah M.",
-    location: "Franklin, TN",
-    project: "Bathroom Remodel",
-  },
-  {
-    quote:
-      "We hired Todd for a back deck and had him come back the following spring for a covered patio. He does exactly what he says he's going to do, on time and on budget. That's rare.",
-    author: "James & Kelli R.",
-    location: "Brentwood, TN",
-    project: "Deck & Patio",
-  },
-  {
-    quote:
-      "Our barndominium build was a big undertaking. Todd walked us through every phase and we never felt out of the loop. The finished product exceeded our expectations.",
-    author: "Mike D.",
-    location: "Leiper's Fork, TN",
-    project: "Barndominium",
-  },
-  {
-    quote:
-      "From the first walkthrough to the final punch list, Todd was professional and thorough. Our home addition blends seamlessly — you'd never know it wasn't there from the start.",
-    author: "Linda H.",
-    location: "Nashville, TN",
-    project: "Home Addition",
-  },
+// TODO: Replace placeholder cards with real Lawson Builders reviews.
+// All previous testimonials referencing the prior business have been removed.
+const placeholders = [
+  { author: "— [Client Name]", location: "[City, TN]", project: "[Project Type]" },
+  { author: "— [Client Name]", location: "[City, TN]", project: "[Project Type]" },
+  { author: "— [Client Name]", location: "[City, TN]", project: "[Project Type]" },
+  { author: "— [Client Name]", location: "[City, TN]", project: "[Project Type]" },
 ];
 
 export default function Testimonials() {
@@ -45,26 +23,25 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* Testimonials grid */}
+        {/* Placeholder grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-l border-t border-zinc-100">
-          {testimonials.map((t) => (
+          {placeholders.map((t, i) => (
             <article
-              key={t.author}
+              key={i}
               className="border-r border-b border-zinc-100 p-10 flex flex-col justify-between"
             >
-              {/* Large serif quote mark */}
               <div>
                 <p className="font-serif text-6xl text-zinc-100 leading-none mb-4 select-none">
                   &ldquo;
                 </p>
-                <blockquote className="text-zinc-700 text-base leading-relaxed">
-                  {t.quote}
+                <blockquote className="text-zinc-300 text-base leading-relaxed italic">
+                  TODO: Add real client review here.
                 </blockquote>
               </div>
 
               <div className="mt-8 pt-6 border-t border-zinc-100 flex items-center justify-between">
                 <div>
-                  <p className="font-semibold text-zinc-900 text-sm">{t.author}</p>
+                  <p className="font-semibold text-zinc-400 text-sm">{t.author}</p>
                   <p className="text-zinc-400 text-xs mt-0.5">{t.location}</p>
                 </div>
                 <p className="text-warm-dark text-xs font-medium tracking-wide">

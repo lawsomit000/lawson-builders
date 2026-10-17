@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 
+// TODO: This form currently only sets local state on submit — no data is sent anywhere.
+// Wire up to your preferred endpoint (Resend, Formspree, API route, CRM webhook, etc.)
+// and confirm the recipient email is a Lawson Builders address before going live.
+
 const projectTypes = [
-  "General Contracting",
-  "Bathroom Remodel",
-  "Back Deck",
-  "Patio",
-  "Barndominium",
-  "Outdoor Living Space",
-  "Home Addition",
-  "Renovation / Repair",
-  "Other",
+  "Free Consultation Call",
+  "Room Design Plan ($995)",
+  "Renovation Planning Package ($1,950)",
+  "Larger / Multi-Room Project (custom quote)",
+  "Not Sure Yet",
 ];
 
 const inputClass =
@@ -35,6 +35,7 @@ export default function ContactForm() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    // TODO: Send form data to Lawson Builders endpoint before going live
     setSubmitted(true);
   }
 
@@ -47,11 +48,11 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="font-serif text-2xl font-semibold text-zinc-950 mb-3">
-          Message Received
+          You&apos;re Booked
         </h3>
         <p className="text-zinc-500 text-sm leading-relaxed max-w-sm">
-          Thanks for reaching out, {form.name.split(" ")[0]}. We&apos;ll review your project
-          details and get back to you within one business day.
+          Thanks, {form.name.split(" ")[0]}! We&apos;ll reach out within one business day
+          to schedule your call.
         </p>
       </div>
     );
@@ -60,7 +61,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} noValidate>
       <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-zinc-950 mb-10">
-        Tell Us About Your Project
+        Book a Free Call
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
@@ -146,7 +147,7 @@ export default function ContactForm() {
           rows={6}
           value={form.message}
           onChange={handleChange}
-          placeholder="Describe what you have in mind — scope, timeline, location, and any questions you have. The more detail, the better we can help."
+          placeholder="Tell us what you have in mind — even if it's just an idea. Scope, timeline, location, and any questions you have. The more detail, the better we can help."
           className={`${inputClass} resize-none`}
         />
       </div>
@@ -159,7 +160,7 @@ export default function ContactForm() {
           type="submit"
           className="shrink-0 text-xs font-semibold tracking-widest uppercase bg-zinc-950 text-white px-10 py-4 hover:bg-warm-accent transition-colors duration-300 focus-visible:outline-none"
         >
-          Send Request
+          Book My Call
         </button>
       </div>
     </form>

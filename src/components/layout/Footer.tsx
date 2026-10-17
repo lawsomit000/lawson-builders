@@ -1,15 +1,12 @@
 import Link from "next/link";
-import Logo from "@/components/ui/Logo";
+import Image from "next/image";
 
 const serviceLinks = [
-  { label: "General Contracting", href: "/services" },
-  { label: "Bathroom Remodels", href: "/services" },
-  { label: "Back Decks", href: "/services" },
-  { label: "Patios", href: "/services" },
-  { label: "Barndominiums", href: "/services" },
-  { label: "Outdoor Living Spaces", href: "/services" },
-  { label: "Home Additions", href: "/services" },
-  { label: "Renovations & Repairs", href: "/services" },
+  { label: "Design Consultation", href: "/services#design-consultation" },
+  { label: "Bathroom & Kitchen Design", href: "/services#bathrooms-kitchens" },
+  { label: "Addition & Barndominium Planning", href: "/services#additions-barndominiums" },
+  { label: "Outdoor Living Design", href: "/services#outdoor-living" },
+  { label: "Whole-Home Renovation Design", href: "/services#whole-home-renovations" },
 ];
 
 const pageLinks = [
@@ -23,31 +20,16 @@ const pageLinks = [
 export default function Footer() {
   return (
     <footer className="bg-zinc-950 text-zinc-400">
-      {/* Top CTA strip */}
-      <div className="border-b border-zinc-800">
-        <div className="max-w-screen-xl mx-auto px-6 lg:px-10 py-16 sm:py-20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
-          <div>
-            <p className="text-xs font-medium tracking-[0.2em] uppercase text-warm-accent mb-3">
-              Start Your Project
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-serif text-white leading-tight">
-              Ready to build something{" "}
-              <em className="italic">worth lasting?</em>
-            </h2>
-          </div>
-          <Link
-            href="/contact"
-            className="shrink-0 text-xs font-semibold tracking-widest uppercase border border-white/30 text-white px-8 py-4 hover:bg-white hover:text-zinc-950 transition-colors duration-300"
-          >
-            Request a Free Estimate
-          </Link>
-        </div>
-      </div>
-
-      {/* Full logo centrepiece */}
+      {/* Logo centrepiece */}
       <div className="border-b border-zinc-800/60 py-14 flex justify-center">
-        <Link href="/" aria-label="Todd Joseph Builders — Home">
-          <Logo variant="dark" size="full" />
+        <Link href="/" aria-label="Lawson Builders — Home">
+          <Image
+            src="/images/logo-lll.png"
+            alt="Lawson Builders"
+            width={120}
+            height={120}
+            style={{ display: "block" }}
+          />
         </Link>
       </div>
 
@@ -100,14 +82,16 @@ export default function Footer() {
             <ul className="space-y-5">
               <li>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Phone</p>
-                <a href="tel:+17739578493" className="text-zinc-300 text-sm hover:text-white transition-colors">
-                  (773) 957-8493
+                {/* TODO: Replace with real Lawson phone number */}
+                <a href="tel:+1XXXXXXXXXX" className="text-zinc-300 text-sm hover:text-white transition-colors">
+                  [FILL IN: phone]
                 </a>
               </li>
               <li>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Email</p>
-                <a href="mailto:hello@tjbuild.com" className="text-zinc-300 text-sm hover:text-white transition-colors">
-                  hello@tjbuild.com
+                {/* TODO: Replace with real Lawson email */}
+                <a href="mailto:hello@lawsonbuilders.com" className="text-zinc-300 text-sm hover:text-white transition-colors">
+                  [FILL IN: email]
                 </a>
               </li>
               <li>
@@ -120,9 +104,10 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-zinc-600 text-xs">
-            &copy; {new Date().getFullYear()} Todd Joseph Builders. All rights reserved.
+            &copy; {new Date().getFullYear()} Lawson Builders. All rights reserved.
           </p>
-          <p className="text-zinc-700 text-xs">Licensed &amp; Insured General Contractor · Middle TN</p>
+          {/* TODO: Confirm insurance status before adding "Insured" back to this line */}
+          <p className="text-zinc-700 text-xs">Home Design &amp; Planning · Middle Tennessee</p>
         </div>
       </div>
     </footer>
