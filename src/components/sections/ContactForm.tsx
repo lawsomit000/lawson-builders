@@ -2,10 +2,6 @@
 
 import { useState } from "react";
 
-// TODO: This form currently only sets local state on submit — no data is sent anywhere.
-// Wire up to your preferred endpoint (Resend, Formspree, API route, CRM webhook, etc.)
-// and confirm the recipient email is a Lawson Builders address before going live.
-
 const projectTypes = [
   "Free Consultation Call",
   "Room Design Plan ($995)",
@@ -19,6 +15,8 @@ const inputClass =
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -33,10 +31,23 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: Send form data to Lawson Builders endpoint before going live
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly at mitch@lawsonbuild.com.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (submitted) {
@@ -152,15 +163,20 @@ export default function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="mt-6 text-sm text-red-600">{error}</p>
+      )}
+
       <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
         <p className="text-xs text-zinc-400">
           We respond within 1 business day. Your info is never shared.
         </p>
         <button
           type="submit"
-          className="shrink-0 text-xs font-semibold tracking-widest uppercase bg-zinc-950 text-white px-10 py-4 hover:bg-warm-accent transition-colors duration-300 focus-visible:outline-none"
+          disabled={loading}
+          className="shrink-0 text-xs font-semibold tracking-widest uppercase bg-zinc-950 text-white px-10 py-4 hover:bg-warm-accent transition-colors duration-300 focus-visible:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Book My Call
+          {loading ? "Sending…" : "Book My Call"}
         </button>
       </div>
     </form>
