@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
 
 // TODO: Replace https://lawsonbuilders.com with the real production domain
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lawsonbuilders.com"),
+  metadataBase: new URL("https://www.lawsonbuild.com"),
   title: {
     default: "Lawson Builders | Home Design & Remodel Planning in Middle Tennessee",
     template: "%s | Lawson Builders",
