@@ -1,23 +1,17 @@
 import Link from "next/link";
 
-// TODO: Fill in design fee structure before publishing.
-// Options to confirm: flat fee by project type, per-square-foot, hourly, or package-based.
-// Also confirm: what's included, payment schedule, whether fee is credited toward anything.
-
 const pricingCards = [
   {
     num: "01",
     title: "Free Consultation Call",
     description:
       "Your first call is always free. We talk through your project, goals, timeline, and budget, and recommend the right package — no strings attached.",
-    todo: false,
   },
   {
     num: "02",
-    title: "Design Phase",
+    title: "Design Packages",
     description:
-      "TODO: Describe the design phase fee or range (flat fee, hourly, or by project type). What does it include? Is anything credited or applied toward future work?",
-    todo: true,
+      "Design packages are fixed-fee engagements with a clear scope agreed in writing before we start. Pricing is based on project type and scale — from a single-room concept to a full renovation plan. We'll recommend the right fit on your free call.",
   },
 ];
 
@@ -53,7 +47,7 @@ export default function PricingProcess() {
               <h3 className="font-serif text-lg font-semibold text-zinc-900 mb-4">
                 {card.title}
               </h3>
-              <p className={`text-sm leading-relaxed ${card.todo ? "text-amber-600 italic" : "text-zinc-500"}`}>
+              <p className="text-sm leading-relaxed text-zinc-500">
                 {card.description}
               </p>
             </div>

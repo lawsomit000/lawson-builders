@@ -20,25 +20,15 @@ export const metadata: Metadata = {
   },
 };
 
-// TODO: Confirm full deliverables list before publishing this section.
-// Potential items (all unconfirmed — check each before going live):
-//   - Measured existing-conditions drawings
-//   - Proposed floor plan
-//   - Elevations
-//   - 3D renderings (confirm if offered)
-//   - Finish and fixture schedule
-//   - Material spec sheet
-//   - Budget estimate / cost range
-//   - Contractor bid package
 const deliverables = [
-  "Measured existing-conditions drawings",
-  "Proposed floor plan",
-  "Elevations",
-  "3D renderings (confirm if offered)",
-  "Finish and fixture schedule",
-  "Material spec sheet",
-  "Budget estimate / cost range",
-  "Contractor bid package",
+  "Conceptual Floor Plans & Space Planning",
+  "Interior & Exterior Design Concepts",
+  "Photorealistic 3D Renderings",
+  "Materials, Finishes & Color Selections",
+  "Renovation & Addition Planning",
+  "Outdoor Living Design",
+  "Design Revisions & Refinements",
+  "Contractor-Ready Concept Presentations",
 ];
 
 type Service = {
@@ -58,12 +48,12 @@ const services: Service[] = [
     title: "Whole-Home & Renovation Design",
     slug: "whole-home-design",
     description:
-      "Planning a larger renovation means a lot of moving pieces. We look at the whole picture — layout, flow, finishes, and phasing — and turn it into one cohesive plan, so every room works together and your contractor knows exactly what to bid.",
+      "Thoughtful design concepts for home renovations, additions, and complete transformations. We help reimagine existing spaces through layout planning, material selections, and realistic visualizations that bring your vision to life.",
     highlights: [
-      "Whole-home layout and flow planning",
-      "Cohesive finish and material direction",
-      "Project phasing recommendations",
-      "Bid-ready plan package",
+      "Layout planning and space optimization",
+      "Materials, finishes, and color direction",
+      "Project phasing and sequencing",
+      "Contractor-ready concept presentation",
     ],
     image: "/images/design-services.jpg",
     imageAlt: "Designer reviewing floor plan sketches and material swatches for a whole-home renovation plan",
@@ -73,12 +63,12 @@ const services: Service[] = [
     title: "Bathroom Design",
     slug: "bathroom-design",
     description:
-      "A great bathroom starts long before the first tile is set. We plan the layout, select fixtures and finishes, and work through the details — storage, lighting, shower configuration — on paper first. Whether it's a guest bath refresh or a spa-style primary suite, you'll leave with a plan any contractor can price accurately.",
+      "From refreshing an existing bathroom to reimagining a primary suite, we develop cohesive concepts that balance timeless design, functionality, and everyday comfort.",
     highlights: [
       "Layout and space planning",
       "Tile, fixture, and vanity selections",
       "Lighting and storage design",
-      "Bid-ready plan and spec sheet",
+      "Design concept and finish selections",
     ],
     image: "/images/interior-arches.jpg",
     imageAlt: "Bathroom design with arched doorways and freestanding soaking tub",
@@ -88,27 +78,27 @@ const services: Service[] = [
     title: "Deck Design",
     slug: "deck-design",
     description:
-      "A well-designed deck extends your living space and adds real value to your home. We help you choose the right size, layout, and material — pressure-treated, cedar, or composite — for your yard, budget, and style, then document it so your builder has a clear plan to follow.",
+      "Extend your living space outdoors with thoughtfully designed decks that complement your home's architecture and lifestyle. We explore layouts, materials, and design features to create a seamless connection between indoors and out.",
     highlights: [
       "Size, shape, and layout planning",
       "Material comparison and selection",
-      "Railing, stair, and built-in seating design",
-      "Plan package ready for contractor bids",
+      "Railing, stair, and built-in feature design",
+      "Contractor-ready concept presentation",
     ],
-    // TODO: Needs a dedicated exterior deck image — provide a photo and we'll swap this placeholder out.
-    gradient: "from-stone-200 via-stone-300 to-stone-400",
+    image: "/images/deck-design.png",
+    imageAlt: "Covered outdoor deck with stone fireplace and wireframe design overlay at sunset",
   },
   {
     num: "04",
     title: "Patio Design",
     slug: "patio-design",
     description:
-      "Concrete, pavers, or natural stone — the right patio depends on how you'll use it. We design the layout, select materials, and plan how it connects to your home and yard, so the finished space feels intentional, not added on.",
+      "Create inviting outdoor environments designed for entertaining, relaxing, and gathering. From covered patios to outdoor kitchens and fireplaces, we help visualize spaces that feel like a natural extension of your home.",
     highlights: [
       "Layout and traffic flow planning",
       "Material and pattern selection",
       "Connection to home, deck, and landscape",
-      "Plan and material list ready for bids",
+      "Visual concept and material selections",
     ],
     image: "/images/patio-outdoor.jpg",
     imageAlt: "Patio design with flagstone path, raised deck, pergola, and landscaping",
@@ -118,12 +108,12 @@ const services: Service[] = [
     title: "Barndominium Planning",
     slug: "barndominium-planning",
     description:
-      "Barndominiums offer incredible flexibility — which means a lot of decisions. We help you plan a floor plan that fits your family, select interior finishes, and think through how you'll live in the space for years to come.",
+      "Bring your barndominium vision to life with conceptual floor plans, exterior design, and interior space planning. We combine practical layouts with distinctive architectural character.",
     highlights: [
-      "Custom floor plan development",
+      "Conceptual floor plan development",
       "Interior layout and finish selections",
-      "Energy-efficiency considerations",
-      "Plan package ready for builder bids",
+      "Exterior design and architectural character",
+      "Design concept ready to share with your builder",
     ],
     image: "/images/barndominium.jpg",
     imageAlt: "Board-and-batten barndominium exterior at dusk",
@@ -138,7 +128,7 @@ const services: Service[] = [
       "Covered patio and pergola design",
       "Outdoor kitchen and fireplace layout",
       "Lighting and comfort planning",
-      "Bid-ready plan package",
+      "Contractor-ready concept presentation",
     ],
     image: "/images/deck-outdoor.jpg",
     imageAlt: "Covered outdoor living space design with stone fireplace and comfortable seating area",
@@ -153,7 +143,7 @@ const services: Service[] = [
       "Concept and layout options",
       "Integration with existing floor plan",
       "Exterior and interior finish direction",
-      "Plan package ready for contractor bids",
+      "Contractor-ready concept presentation",
     ],
     image: "/images/home-addition.jpg",
     imageAlt: "Home addition design with floor-to-ceiling windows and open-concept interior",
@@ -168,10 +158,10 @@ const services: Service[] = [
       "Kitchen layout and cabinetry design",
       "Countertop, flooring, and surface selections",
       "Lighting and fixture planning",
-      "Bid-ready plan and spec sheet",
+      "Design concept and finish selections",
     ],
-    // TODO: Needs a finished kitchen or interior design photo.
-    gradient: "from-warm-200 via-stone-200 to-stone-300",
+    image: "/images/kitchen-design.png",
+    imageAlt: "Bright farmhouse kitchen with marble countertops and wireframe design overlay",
   },
 ];
 
@@ -212,7 +202,7 @@ export default function ServicesPage() {
         <div className="max-w-screen-xl mx-auto px-6 lg:px-10">
           <div className="mb-16">
             <p className="text-warm-accent text-[10px] font-medium tracking-[0.28em] uppercase mb-5">
-              Your Plan Package
+              What We Offer
             </p>
             <h2 className="font-serif text-4xl sm:text-5xl font-semibold text-zinc-950 leading-tight">
               Everything You Need
@@ -223,17 +213,14 @@ export default function ServicesPage() {
 
           <div className="bg-warm-50 border border-zinc-100 p-10">
             <p className="text-zinc-500 text-sm leading-relaxed mb-8 max-w-2xl">
-              Every completed design engagement includes a plan package ready to hand off
-              to a contractor. The exact deliverables depend on project scope — the items
-              below are pending confirmation.
+              From initial inspiration to a refined design direction, our services help you
+              make informed decisions before investing in construction.
             </p>
-            {/* TODO: Confirm which deliverables are included before publishing.
-                Remove the amber "TODO" prefix from each item once confirmed. */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
               {deliverables.map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <div className="w-1 h-1 rounded-full bg-warm-accent shrink-0 mt-2" />
-                  <span className="text-sm text-amber-600 italic">TODO: Confirm — {item}</span>
+                  <span className="text-sm text-zinc-600">{item}</span>
                 </div>
               ))}
             </div>
@@ -308,7 +295,7 @@ export default function ServicesPage() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 hover:text-warm-accent transition-colors group/link w-fit"
                   >
-                    Book a Free Call
+                    Discuss Your Project
                     <svg
                       className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform"
                       fill="none"
