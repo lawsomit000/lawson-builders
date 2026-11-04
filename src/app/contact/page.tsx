@@ -46,15 +46,18 @@ export default function ContactPage() {
                   {[
                     {
                       label: "Phone",
-                      // TODO: Replace with real Lawson phone number
-                      value: "[FILL IN: phone]",
-                      href: "tel:+1XXXXXXXXXX",
+                      value: "615-922-9948",
+                      href: "tel:+16159229948",
                     },
                     {
                       label: "Email",
-                      // TODO: Replace with real Lawson email
-                      value: "[FILL IN: email]",
-                      href: "mailto:hello@lawsonbuilders.com",
+                      value: "mitch@lawsonbuild.com",
+                      href: "mailto:mitch@lawsonbuild.com",
+                    },
+                    {
+                      label: "Website",
+                      value: "www.lawsonbuild.com",
+                      href: "https://www.lawsonbuild.com",
                     },
                   ].map((item) => (
                     <div key={item.label} className="border-b border-zinc-100 pb-8">

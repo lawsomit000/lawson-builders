@@ -82,16 +82,20 @@ export default function Footer() {
             <ul className="space-y-5">
               <li>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Phone</p>
-                {/* TODO: Replace with real Lawson phone number */}
-                <a href="tel:+1XXXXXXXXXX" className="text-zinc-300 text-sm hover:text-white transition-colors">
-                  [FILL IN: phone]
+                <a href="tel:+16159229948" className="text-zinc-300 text-sm hover:text-white transition-colors">
+                  615-922-9948
                 </a>
               </li>
               <li>
                 <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Email</p>
-                {/* TODO: Replace with real Lawson email */}
-                <a href="mailto:hello@lawsonbuilders.com" className="text-zinc-300 text-sm hover:text-white transition-colors">
-                  [FILL IN: email]
+                <a href="mailto:mitch@lawsonbuild.com" className="text-zinc-300 text-sm hover:text-white transition-colors">
+                  mitch@lawsonbuild.com
+                </a>
+              </li>
+              <li>
+                <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Website</p>
+                <a href="https://www.lawsonbuild.com" className="text-zinc-300 text-sm hover:text-white transition-colors">
+                  www.lawsonbuild.com
                 </a>
               </li>
               <li>

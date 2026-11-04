@@ -70,14 +70,10 @@ const jsonLd = {
   name: "Lawson Builders",
   description:
     "Home design and planning services in Middle Tennessee. We help homeowners turn their ideas into finished designs, detailed plans, and realistic budgets — so they're ready to hire a builder with confidence.",
-  // TODO: Replace with real domain
-  url: "https://lawsonbuilders.com",
-  // TODO: Replace with real domain
-  logo: "https://lawsonbuilders.com/images/logo-lll.png",
-  // TODO: Replace with real phone number
-  telephone: "[FILL IN: phone]",
-  // TODO: Replace with real email
-  email: "[FILL IN: email]",
+  url: "https://www.lawsonbuild.com",
+  logo: "https://www.lawsonbuild.com/images/logo-lll.png",
+  telephone: "+16159229948",
+  email: "mitch@lawsonbuild.com",
   address: {
     "@type": "PostalAddress",
     // TODO: Add full address

@@ -96,7 +96,7 @@ export default function HomePage() {
                 <em className="italic font-normal">the Lawsons</em>
               </h2>
               <p className="text-zinc-600 leading-relaxed mb-8">
-                Madi and Mitch have bought, remodeled, and sold 7 homes together — and
+                Madi and Mitch have bought, remodeled, and sold 5 homes together — and
                 design is what they love most about it. Middle school sweethearts, married
                 15 years, and parents to two young boys, they started Lawson Builders to
                 help other families plan homes they&apos;ll love for years to come.

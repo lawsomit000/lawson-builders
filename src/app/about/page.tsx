@@ -92,7 +92,7 @@ export default function AboutPage() {
                   things get hard.
                 </p>
                 <p>
-                  Together, we&apos;ve bought, designed, renovated, and sold 7 homes.
+                  Together, we&apos;ve bought, designed, renovated, and sold 5 homes.
                   We&apos;ve lived through every phase of the process as homeowners — the
                   good decisions and the ones we learned from. We started Lawson Builders
                   to do this full time, and to bring the same care we put into our own
