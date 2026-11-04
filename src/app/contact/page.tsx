@@ -45,7 +45,7 @@ export default function ContactPage() {
                 <div className="space-y-8">
                   {[
                     {
-                      label: "Phone",
+                      label: "Text Me",
                       value: "615-922-9948",
                       href: "tel:+16159229948",
                     },

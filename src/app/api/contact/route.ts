@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: "Lawson Builders <onboarding@resend.dev>",
     to: "mitch@lawsonbuild.com",
     replyTo: email,
@@ -24,6 +24,11 @@ export async function POST(request: Request) {
       message,
     ].join("\n"),
   });
+
+  if (error) {
+    console.error("Resend error:", JSON.stringify(error));
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 
   return NextResponse.json({ success: true });
 }

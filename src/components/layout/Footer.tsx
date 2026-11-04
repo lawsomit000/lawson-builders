@@ -81,7 +81,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-5">
               <li>
-                <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Phone</p>
+                <p className="text-zinc-600 text-[10px] uppercase tracking-wider mb-1">Text Me</p>
                 <a href="tel:+16159229948" className="text-zinc-300 text-sm hover:text-white transition-colors">
                   615-922-9948
                 </a>
