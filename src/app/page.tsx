@@ -87,9 +87,15 @@ export default function HomePage() {
               />
             </div>
             <div className="flex flex-col justify-center px-8 py-16 lg:px-16 lg:py-20">
-              <p className="text-warm-accent text-[10px] font-medium tracking-[0.28em] uppercase mb-6">
-                Family Owned &amp; Operated
-              </p>
+              <div className="flex items-center gap-4 mb-6">
+                <p className="text-warm-accent text-[10px] font-medium tracking-[0.28em] uppercase">
+                  Family Owned &amp; Operated
+                </p>
+                <span className="text-zinc-300 text-[10px]">·</span>
+                <p className="text-warm-accent text-[10px] font-medium tracking-[0.28em] uppercase">
+                  Veteran Owned
+                </p>
+              </div>
               <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-zinc-950 mb-8 leading-tight">
                 Meet
                 <br />

@@ -50,9 +50,15 @@ export default function AboutPage() {
       {/* Page header */}
       <section className="bg-zinc-950 pt-[72px]">
         <div className="max-w-screen-xl mx-auto px-6 lg:px-10 py-20 sm:py-28">
-          <p className="text-warm-accent text-[10px] font-medium tracking-[0.3em] uppercase mb-6">
-            Who We Are
-          </p>
+          <div className="flex items-center gap-4 mb-6">
+            <p className="text-warm-accent text-[10px] font-medium tracking-[0.3em] uppercase">
+              Who We Are
+            </p>
+            <span className="text-zinc-600 text-[10px]">·</span>
+            <p className="text-warm-accent text-[10px] font-medium tracking-[0.3em] uppercase">
+              Veteran Owned
+            </p>
+          </div>
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.05] mb-8 max-w-2xl">
             About Lawson Builders
           </h1>
